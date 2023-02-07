@@ -13,9 +13,12 @@ use App\Http\Controllers\TugasController;
 use App\Http\Controllers\Tugas2Controller;
 use App\Http\Controllers\Tugas3Controller;
 use App\Http\Controllers\PengumpulanTugasController;
+use App\Http\Controllers\PengumpulanTugas2Controller;
+use App\Http\Controllers\PengumpulanTugas3Controller;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\CobaController;
+use App\Http\Controllers\TestimoniController;
 // use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -35,7 +38,11 @@ use Illuminate\Support\Facades\Auth;
 // Route::get('/', function () {
 //     return view('layouts.welcome');
 // });
-Route::get('/',[LandingController::class, 'index']);
+Route::get('/',[LandingController::class, 'index'])->name('index');
+// Route::get('/testimoni-details/{testimoni}', 'LandingController@testimoni')->name('testimoni-details');
+// Route::get('/testimoni', function () {
+//     return redirect()->route('testimonis');
+// });
 
 // Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('guest');
 // Route::post('/login', [LoginController::class, 'proslogin']);
@@ -49,6 +56,7 @@ Route::get('/',[LandingController::class, 'index']);
 Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('testimoni-form', TestimoniController::class);
 
 Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
     Route::get('dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
@@ -76,6 +84,8 @@ Route::group(['prefix'=>'mahasiswa', 'middleware'=>['isUser','auth']], function(
     Route::get('/tugas/semester-2/detail/{detailtugas2}', [App\Http\Controllers\DashboardMahasiswaController::class, 'detail_tugas2'])->name('mahasiswa.tugas.semester-2.detail');
     Route::get('/tugas/semester-3/detail/{detailtugas3}', [App\Http\Controllers\DashboardMahasiswaController::class, 'detail_tugas3'])->name('mahasiswa.tugas.semester-3.detail');
     Route::resource('pengumpulan-tugas', PengumpulanTugasController::class);
+    Route::resource('pengumpulan-tugas2', PengumpulanTugas2Controller::class);
+    Route::resource('pengumpulan-tugas3', PengumpulanTugas3Controller::class);
     // Route::get('data-materi-semester-1-detail', [DashboardMahasiswaController::class, 'materi_detail'])->name('mahasiswa.data-materi-semester-1-detail');
     // Route::get('mahasiswa/detail/{$data}', [DashboardMahasiswaController::class, 'detail_materi']);
     // Route::get('profile', [UserController::class, 'profile'])->name('user.profile');
@@ -87,6 +97,12 @@ Route::group(['prefix'=>'dosen', 'middleware'=>['isDosen','auth']], function(){
     Route::get('data-materi', [DashboardDosenController::class, 'data_materi'])->name('dosen.data-materi');
     Route::get('data-tugas', [DashboardDosenController::class, 'data_tugas'])->name('dosen.data-tugas');
     Route::get('data-pengumpulan-tugas', [DashboardDosenController::class, 'pengumpulan_tugas'])->name('dosen.data-pengumpulan-tugas');
+    Route::get('data-pengumpulan-tugas1', [DashboardDosenController::class, 'pengumpulan_tugas1'])->name('dosen.data-pengumpulan-tugas1');
+    Route::get('data-pengumpulan-tugas2', [DashboardDosenController::class, 'pengumpulan_tugas2'])->name('dosen.data-pengumpulan-tugas2');
+    Route::get('data-pengumpulan-tugas3', [DashboardDosenController::class, 'pengumpulan_tugas3'])->name('dosen.data-pengumpulan-tugas3');
+    Route::delete('data-pengumpulan-tugas1/destroy/{tuga}', [DashboardDosenController::class, 'destroy'])->name('dosen.data-pengumpulan-tugas1.destroy');
+    Route::delete('data-pengumpulan-tugas2/destroy2/{tuga}', [DashboardDosenController::class, 'destroy2'])->name('dosen.data-pengumpulan-tugas2.destroy2');
+    Route::delete('data-pengumpulan-tugas3/destroy3/{tuga}', [DashboardDosenController::class, 'destroy3'])->name('dosen.data-pengumpulan-tugas3.destroy3');
     Route::resource('materi', MateriController::class);
     Route::resource('materi2', Materi2Controller::class);
     Route::resource('materi3', Materi3Controller::class);

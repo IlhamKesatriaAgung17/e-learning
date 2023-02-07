@@ -6,13 +6,13 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">DATA PENGUMPULAN TUGAS</h1>
+                    <h1 class="m-0">DATA PENGUMPULAN TUGAS SEMESTER 1</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{route('dosen.dashboard')}}">Dashboard</a></li>
-                        <li class="breadcrumb-item"><a href="{{route('dosen.data-tugas')}}">Data Pengumpulan Tugas</a></li>
-                        <li class="breadcrumb-item">Data Pengumpulan Tugas</li>
+                        <li class="breadcrumb-item"><a href="{{route('dosen.data-pengumpulan-tugas')}}">Data Pengumpulan Tugas</a></li>
+                        <li class="breadcrumb-item">Data Pengumpulan Tugas Semester 1</li>
                     </ol>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                                     <p>Apakah Anda yakin akan menghapus data ini ?</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <form method="POST" action="{{ route('pengumpulan-tugas.destroy', $items->id) }}">
+                                    <form method="POST" action="{{ route('dosen.data-pengumpulan-tugas1.destroy', $items->id) }}">
                                         @method('DELETE')
                                         @csrf
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>

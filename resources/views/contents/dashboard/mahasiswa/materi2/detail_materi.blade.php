@@ -28,24 +28,39 @@
            <div class="card-body">
                 <table class="table table-bordered text-center">
                     <table align="left" cellpadding="4" width="100%" >
-                        <center><img src="/adminlte-3.1.0/dist/img/{{$detailmateri2->kategori_materi}}.jpg" height="40%" width="40%" alt="{{ $detailmateri2->nama_materi }}"></center>
-                        <tbody>
-                            <tr>
-                                <td><b>Nama&nbsp;Materi</b></td><td>:</td><td>{{ $detailmateri2->nama_materi }}</td>
-                            </tr>
-                            <tr>
-                                <td><b>Mata&nbsp;Kuliah</b></td><td>:</td><td>{{$detailmateri2->matkul}}</td>
-                            </tr>
-                            <tr>
-                                <td><b>Semester</b></td><td>:</td><td>{{$detailmateri2->semester}}</td>
-                            </tr>
-                            <tr>
-                                <td><b>Deskripsi</b></td><td>:</td><td style="text-align: justify">{{$detailmateri2->deskripsi}}</td>
-                            </tr>
-                            <tr>
-                                <td><b>File</b></td><td>:</td><td><a href="/img/materi2/{{$detailmateri2->file}}"><button class="btn btn-primary btn-sm" type="button">Download Materi<br>{{$detailmateri2->nama_materi}}</button></a></td>
-                            </tr>
-                        </tbody>
+                        {{-- <div class="invoice p-3 mb-3">
+                        <!-- title row -->
+                        <div class="row"> --}}
+                            <div class="col-12">
+                                <h4>
+                                  <i class="fas fa-globe"></i> {{$detailmateri2->nama_materi}}
+                                  <small class="float-right">Mata Kuliah : {{$detailmateri2->matkul}}</small>
+                                </h4>
+                              </div>
+                              <!-- /.col -->
+                            {{-- </div> --}}
+
+
+                            <div class="row">
+                              <!-- accepted payments column -->
+                              <div class="col-lg-12">
+                                &nbsp;
+                                <p style="margin-left: 10%">
+                                  {!!$detailmateri2->deskripsi!!}
+                                </p>
+                              </div>
+                            </div>
+                            <!-- /.row -->
+
+                            <!-- this row will not appear when printing -->
+                            <div class="row no-print">
+                              <div class="col-12">
+                                {{-- <a href="/img/tugas/{{$detailmateri2->file}}" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a> --}}
+                                <a href="/img/materi/semester1/{{$detailmateri2->file}}"><button class="btn btn-primary  float-left" type="button"> <i class="fas fa-download"></i> Download Materi {{$detailmateri2->nama_materi}}</button></a>
+                              </div>
+                            </div>
+                            {{-- </div>
+                          </div> --}}
                     </table>
                 </table>
            </div>

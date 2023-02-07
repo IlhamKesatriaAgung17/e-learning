@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('layouts.dashboard-dosen')
 
 @section('content')
 <div class="content-wrapper">
@@ -47,7 +47,7 @@
                        <div class="form-group">
                         <label for='matkul'>Mata Kuliah</label> <br>
                             <select id="matkul" name="matkul" class="form-control">
-                                <option value="pilih">{{$materi->matkul}}</option>
+                                <option value="{{$materi->matkul}}">{{$materi->matkul}}</option>
                                 <option value="Pemrograman Web HTML">Pemrograman HTML</option>
                                 <option value="Algoritma">Algoritma</option>
                             </select>
@@ -56,21 +56,21 @@
                        <div class="form-group">
                         <label for='semester'>Semester</label> <br>
                         <select id="semester" name="semester" class="form-control">
-                            <option value="pilih">{{$materi->semester}}</option>
+                            <option value="{{$materi->semester}}">{{$materi->semester}}</option>
                             <option value="I">I</option>
                             <option value="II">II</option>
                             <option value="III">III</option>
                         </select>
                        </div>
                        <div class="form-group">
-                        <label for='deskripsi'>Deskripsi</label> <br>
-                        <textarea name="deskripsi" id="deskripsi" cols="142" rows="10">{{$materi->deskripsi}}</textarea>
-                       </div>
+                        <label for="">Deskripsi</label><br>
+                        <textarea name="deskripsi"  id="summernote"  cols="30" rows="10">{{$materi->deskripsi}}</textarea>
+                        </div>
                        <div class="form-group">
                         <label for='file'>File/Dokumen</label> <br>
                         <input type="file" id="file" name="file" class="form-control">
                         <br>
-                        <a href="/img/materi/{{$materi->file}}"><button class="btn btn-primary" type="button">Download {{$materi->nama_materi}}</button></a>
+                        <a href="/img/materi/semester1/{{$materi->file}}"><button class="btn btn-primary" type="button">Download {{$materi->nama_materi}}</button></a>
                        </div>
 
                        <div class="form-group">

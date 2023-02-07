@@ -22,7 +22,7 @@
     <div class="content text-dark">
        <div class="card card-info card-outline">
             <div class="card-header bg-success">
-                <h3>Detail Tugas<a href="{{route('mahasiswa.tugas.semester-1')}}" class="btn btn-primary float-right">Kembali</a></h3>
+                <h3>Detail Tugas<a href="{{route('mahasiswa.tugas.semester-2')}}" class="btn btn-primary float-right">Kembali</a></h3>
             </div>
 
            <div class="card-body">
@@ -49,7 +49,7 @@
                         <div class="col-12">
                             <h4>
                               <i class="fas fa-globe"></i> {{$detailtugas2->nama_tugas}}
-                              <small class="float-right">Mulai : {{$detailtugas->tgl_mulai}}</small>
+                              <small class="float-right">Mulai : {{$detailtugas2->tgl_mulai}}</small>
                             </h4>
                         </div>
 

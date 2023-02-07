@@ -48,7 +48,7 @@
                         <td>{{$items->nama_materi}}</td>
                         <td>{{$items->matkul}}</td>
                         <td>{{$items->semester}}</td>
-                        <td><a href="{{ url('/img/materi/'.$items->file)}}"><button class="btn btn-primary" type="button">Download File</button></a></td>
+                        <td><a href="{{ url('/img/materi/semester1/'.$items->file)}}"><button class="btn btn-primary" type="button">Download File</button></a></td>
                         <td class="text-center">
                             <div class="btn-group">
                             <a href="{{route('materi.edit',['materi' => $items->id]) }}"><i class="fas fa-edit btn btn-warning btn-sm"></i></a>

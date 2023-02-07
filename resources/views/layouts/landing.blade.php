@@ -146,25 +146,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> E-AMIKBN </title>
   <!-- favicon -->
-  <link rel="shortcut icon" href="landing/assets/images/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="{{asset('landing/assets/images/favicon.png')}}" type="image/x-icon">
   <!-- bootstrap -->
-  <link rel="stylesheet" href="landing/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{asset('landing/assets/css/bootstrap.min.css')}}">
   <!-- fontawesome -->
-  <link rel="stylesheet" href="landing/assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="{{asset('landing/assets/css/fontawesome.min.css')}}">
   <!-- Flat Icon -->
-  <link rel="stylesheet" href="landing/assets/css/flaticon.css">
+  <link rel="stylesheet" href="{{asset('landing/assets/css/flaticon.css')}}">
   <!-- animate -->
-  <link rel="stylesheet" href="landing/assets/css/animate.css">
+  <link rel="stylesheet" href="{{asset('landing/assets/css/animate.css')}}">
   <!-- Owl Carousel -->
-  <link rel="stylesheet" href="landing/assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="{{asset('landing/assets/css/owl.carousel.min.css')}}">
   <!-- magnific popup -->
-  <link rel="stylesheet" href="landing/assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="{{asset('landing/assets/css/magnific-popup.css')}}">
   <!-- AOS css -->
-  <link rel="stylesheet" href="landing/assets/css/aos.css">
+  <link rel="stylesheet" href="{{asset('landing/assets/css/aos.css')}}">
   <!-- stylesheet -->
-  <link rel="stylesheet" href="landing/assets/css/style.css">
+  <link rel="stylesheet" href="{{asset('landing/assets/css/style.css')}}">
   <!-- responsive -->
-  <link rel="stylesheet" href="landing/assets/css/responsive.css">
+  <link rel="stylesheet" href="{{asset('landing/assets/css/responsive.css')}}">
 </head>
 
 <body>
@@ -211,30 +211,30 @@
 
 
   <!-- jquery -->
-  <script src="landing/assets/js/jquery.js"></script>
+  <script src="{{asset('landing/assets/js/jquery.js')}}"></script>
   <!-- popper -->
-  <script src="landing/assets/js/popper.min.js"></script>
+  <script src="{{asset('landing/assets/js/popper.min.js')}}"></script>
   <!-- bootstrap -->
-  <script src="landing/assets/js/bootstrap.min.js"></script>
+  <script src="{{asset('landing/assets/js/bootstrap.min.js')}}"></script>
   <!-- way poin js-->
-  <script src="landing/assets/js/waypoints.min.js"></script>
+  <script src="{{asset('landing/assets/js/waypoints.min.js')}}"></script>
   <!-- owl carousel -->
-  <script src="landing/assets/js/owl.carousel.min.js"></script>
+  <script src="{{asset('landing/assets/js/owl.carousel.min.js')}}"></script>
   <!-- magnific popup -->
-  <script src="landing/assets/js/jquery.magnific-popup.js"></script>
+  <script src="{{asset('landing/assets/js/jquery.magnific-popup.js')}}"></script>
   <!-- aos js-->
-  <script src="landing/assets/js/aos.js"></script>
+  <script src="{{asset('landing/assets/js/aos.js')}}"></script>
   <!-- counterup js-->
-  <script src="landing/assets/js/jquery.countdown.min.js"></script>
+  <script src="{{asset('landing/assets/js/jquery.countdown.min.js')}}"></script>
   <!-- easing js-->
-  <script src="landing/assets/js/jquery.easing.1.3.js"></script>
+  <script src="{{asset('landing/assets/js/jquery.easing.1.3.js')}}"></script>
   <!-- Map js -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7eALQrRUekFNQX71IBNkxUXcz-ALS-MY&amp;sensor=false"></script>
-	<script src="landing/assets/js/gmap.js"></script>
+	<script src="{{asset('landing/assets/js/gmap.js')}}"></script>
   <!-- main -->
-  <script src="landing/assets/js/contact.js"></script>
+  <script src="{{asset('landing/assets/js/contact.js')}}"></script>
   <!-- main -->
-  <script src="landing/assets/js/main.js"></script>
+  <script src="{{asset('landing/assets/js/main.js')}}"></script>
 </body>
 
 

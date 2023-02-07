@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('layouts.dashboard-dosen')
 
 @section('content')
 <div class="content-wrapper">
@@ -27,27 +27,27 @@
 
            <div class="card-body">
             <table class="table table-bordered text-center">
-                <form action="{{route('materi2.update', $dtmateri = $materi->id)}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('materi2.update', $dtmateri2 = $materi2->id)}}" method="POST" enctype="multipart/form-data">
                      @method('patch')
                      @csrf
 
                      <div class="form-group">
                          <label for="">Kategori Materi :</label><br>
-                         <input type="radio" id="PWH" name="kategori_materi" value="PWH">
-                         <label for="PWH">PWH</label><br>
-                         <input type="radio" id="Algo" name="kategori_materi" value="Algo">
-                         <label for="Algo">Algo</label><br>
+                         <input type="radio" id="PHP" name="kategori_materi" value="PHP">
+                         <label for="PWH">PHP</label><br>
+                         <input type="radio" id="SIM" name="kategori_materi" value="SIM">
+                         <label for="SIM">SIM</label><br>
                      </div>
 
                     <div class="form-group">
                      <label for='nama_materi'>Nama Materi</label> <br>
-                     <input type="text" id="nama_materi" name="nama_materi" class="form-control" placeholder="Nama" value="{{$materi->nama_materi}}">
+                     <input type="text" id="nama_materi" name="nama_materi" class="form-control" placeholder="Nama" value="{{$materi2->nama_materi}}">
                     </div>
 
                     <div class="form-group">
                      <label for='matkul'>Mata Kuliah</label> <br>
                          <select id="matkul" name="matkul" class="form-control">
-                             <option value="pilih">{{$materi->matkul}}</option>
+                             <option value="{{$materi2->matkul}}">{{$materi2->matkul}}</option>
                              <option value="Pemrograman Web HTML">Pemrograman HTML</option>
                              <option value="Algoritma">Algoritma</option>
                          </select>
@@ -56,21 +56,21 @@
                     <div class="form-group">
                      <label for='semester'>Semester</label> <br>
                      <select id="semester" name="semester" class="form-control">
-                         <option value="pilih">{{$materi->semester}}</option>
+                         <option value="{{$materi2->semester}}">{{$materi2->semester}}</option>
                          <option value="I">I</option>
                          <option value="II">II</option>
                          <option value="III">III</option>
                      </select>
                     </div>
                     <div class="form-group">
-                     <label for='deskripsi'>Deskripsi</label> <br>
-                     <textarea name="deskripsi" id="deskripsi" cols="142" rows="10">{{$materi->deskripsi}}</textarea>
+                        <label for="">Deskripsi</label><br>
+                        <textarea name="deskripsi"  id="summernote"  cols="30" rows="10">{{$materi2->deskripsi}}</textarea>
                     </div>
                     <div class="form-group">
                      <label for='file'>File/Dokumen</label> <br>
                      <input type="file" id="file" name="file" class="form-control">
                      <br>
-                     <a href="/img/materi/{{$materi->file}}"><button class="btn btn-primary" type="button">Download {{$materi->nama_materi}}</button></a>
+                     <a href="/img/materi/semester2/{{$materi2->file}}"><button class="btn btn-primary" type="button">Download {{$materi2->nama_materi}}</button></a>
                     </div>
 
                     <div class="form-group">

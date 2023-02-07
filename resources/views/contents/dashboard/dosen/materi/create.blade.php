@@ -68,9 +68,9 @@
                        </div>
 
                        <div class="form-group">
-                        <label for='deskripsi'>Deskripsi</label> <br>
-                        <textarea  id="deskripsi" name="deskripsi" class="form-control" cols="142" rows="10" placeholder="deskripsi"></textarea>
-                       </div>
+                        <label for="">Deskripsi</label><br>
+                        <textarea name="deskripsi"  id="summernote"  cols="30" rows="10"></textarea>
+                        </div>
 
                        {{-- <div class="form-group">
                         <input type="file" id="foto" name="foto" class="form-control">

@@ -18,11 +18,12 @@
   <link rel="stylesheet" href="{{ asset('adminlte-3.1.0/dist/css/adminlte.min.css')}}">
   <link rel="stylesheet" href="{{ asset ('adminlte-3.1.0/dist/css/adminlte.css') }}">
   <!-- summernote -->
-  <link rel="stylesheet" href="{{ asset('adminlte-3.1.0/plugins/summernote/summernote-bs4.min.css')}}">
-  <!-- summernote -->
- <link rel="stylesheet" href="{{ asset('adminlte-3.1.0/plugins/summernote/summernote-bs4.min.css')}}">
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+  {{-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"> --}}
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
 
 </head>
 <body class="hold-transition sidebar-mini" onload="realtimeclock()">
@@ -61,13 +62,17 @@
 <!-- Summernote -->
 <script src="{{ asset('adminlte-3.1.0/plugins/summernote/summernote-bs4.min.js')}}"></script>
 
-<!-- CodeMirror -->
+<!-- Summernote -->
 <script src="{{ asset('adminlte-3.1.0/plugins/codemirror/codemirror.js')}}"></script>
 <script src="{{ asset('adminlte-3.1.0/plugins/codemirror/mode/css/css.js')}}"></script>
 <script src="{{ asset('adminlte-3.1.0/plugins/codemirror/mode/xml/xml.js')}}"></script>
 <script src="{{ asset('adminlte-3.1.0/plugins/codemirror/mode/htmlmixed/htmlmixed.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 
-<script>
+{{-- <script>
     $(function () {
       // Summernote
       $('#summernote').summernote()
@@ -78,7 +83,15 @@
         theme: "monokai"
       });
     })
-  </script>
+  </script> --}}
+
+<script>
+    $('#summernote').summernote({
+      placeholder: 'Ketikan disini..',
+      tabsize: 2,
+      height: 100
+    });
+</script>
 {{-- <script
   src="https://code.jquery.com/jquery-3.6.0.slim.js"
   integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="

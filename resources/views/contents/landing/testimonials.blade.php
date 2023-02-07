@@ -24,26 +24,33 @@
             <img class="img6" src="landing/assets/images/testimonialimage/2.jpg" alt="">
           </div>
           <div class="testimonial-slider">
+            @if ($testimoni->isEmpty())
+            <div class="text-center my-2"><i>Data Kosong</i></div>
+            <br>
+            @else
+            @foreach ($testimoni as $data)
             <div class="item">
-              <div class="client">
-                <div class="client-image">
-                  <img src="landing/assets/images/testimonialimage/1.jpg" class="img-fluid" alt="">
+                <div class="client">
+                  <div class="client-image">
+                    <img src="{{asset('landing/assets/images/testimonialimage/'.$data->jenis_kelamin)}}" class="img-fluid" alt="">
+                  </div>
+                  <p class="client-say">
+                    {{$data->pesan}}
+                  </p>
+                  <h4 class="client-name">
+                    <a href="#">
+                      {{$data->nama}}
+                    </a>
+                  </h4>
+                  <h5 class="designation">{{$data->role}}</h5>
                 </div>
-                <p class="client-say">
-                  Website ini sangat membantu sekali dalam proses belajar dikampus
-                </p>
-                <h4 class="client-name">
-                  <a href="#">
-                    Syarif Fadila
-                  </a>
-                </h4>
-                <h5 class="designation">Mahasiswa AMIK </h5>
               </div>
-            </div>
-            <div class="item">
+            @endforeach
+            @endif
+            {{-- <div class="item">
               <div class="client">
                 <div class="client-image">
-                  <img src="landing/assets/images/testimonialimage/2.jpg" class="img-fluid" alt="">
+                  <img src="landing/assets/images/testimonialimage/Laki-Laki.jpg" class="img-fluid" alt="">
                 </div>
                 <p class="client-say">
                  Materi seblumnya dapat diakses kemabli sehingga kami dapat mengulang materi yang sudah dipelajari
@@ -55,8 +62,12 @@
                 </h4>
                 <h5 class="designation">Mahasiswa AMIk </h5>
               </div>
-            </div>
+            </div> --}}
           </div>
+          <br>
+          <Center>
+            <Button class="btn btn-sm btn-primary"><a href="{{route('testimoni-form.create')}}" class="text-white">Tambah Komentar</a> </Button>
+          </Center>
         </div>
       </div>
     </div>

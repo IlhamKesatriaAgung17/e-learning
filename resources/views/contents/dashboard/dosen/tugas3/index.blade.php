@@ -44,7 +44,7 @@
                     </tr>
                     @foreach ($dttugas3 as $no => $items )
                     <tr class="bg-light text-center">
-                        <td>{{$dttugas->firstitem()+$no}}</td>
+                        <td>{{$dttugas3->firstitem()+$no}}</td>
                         <td>{{$items->nama_tugas}}</td>
                         <td>{{$items->matkul}}</td>
                         <td>{{$items->semester}}</td>

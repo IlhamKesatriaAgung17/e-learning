@@ -41,7 +41,7 @@ class PengumpulanTugasController extends Controller
         ]);
 
         $file = $request->file('file');
-        $nama_tugas = $request->nama_tugas.date('Ymdhis').'.'.$request->file('file')->getClientOriginalExtension();
+        $nama_tugas = $request->nama_mhs.date('Ymdhis').'.'.$request->file('file')->getClientOriginalExtension();
         $file->move('img/pengumpulantugas/semester1/',$nama_tugas);
 
         $tuga = new PengumpulanTugas();
@@ -52,7 +52,7 @@ class PengumpulanTugasController extends Controller
             $tuga->file = $nama_tugas;
             $tuga->save();
         }
-        return redirect()->route('mahasiswa.tugas')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('mahasiswa.tugas.semester-1')->with('toast_success', 'Data Berhasil Terupdate');
     }
 
     /**
@@ -141,6 +141,6 @@ class PengumpulanTugasController extends Controller
        // Delete Data
        $tuga->delete();
 
-       return redirect()->route('pengumpulantugas.index');
+       return redirect()->route('dosen.data-pengumpulan-tugas1');
     }
 }

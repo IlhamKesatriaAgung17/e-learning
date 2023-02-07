@@ -49,8 +49,9 @@
                          <label for='matkul'>Mata Kuliah</label> <br>
                          <select id="matkul" name="matkul" class="form-control">
                              <option value="pilih">Pilih Mata Kuliah</option>
-                             <option value="Pemrograman Web HTML">Pemrograman Web HTML</option>
-                             <option value="ALgoritma">Algoritma</option>
+                             <option value="Pemrograman Web Framewok Laravel">Pemrograman Web Framewok Laravel</option>
+                             <option value="Basis Data">Basis Data</option>
+                             <option value="Arsitektur Komputer">Arsitektur Komputer</option>
                          </select>
                     </div>
 
@@ -70,28 +71,10 @@
                     </div>
 
                     <div class="form-group">
-                     <label for='deskripsi'>Deskripsi</label> <br>
-                     <textarea  id="deskripsi" name="deskripsi" class="form-control" cols="142" rows="10" placeholder="deskripsi"></textarea>
+                        <label for="">Deskripsi</label><br>
+                        <textarea name="deskripsi"  id="summernote"  cols="30" rows="10"></textarea>
                     </div>
 
-                    <div class="col-md-12">
-                        <div class="card card-outline card-info">
-                          <div class="card-header">
-                            <h3 class="card-title">
-                              Summernote
-                            </h3>
-                          </div>
-                          <!-- /.card-header -->
-                          <div class="card-body">
-                            <textarea id="summernote">
-                              Place <em>some</em> <u>text</u> <strong>here</strong>
-                            </textarea>
-                          </div>
-                          <div class="card-footer">
-                            Visit <a href="https://github.com/summernote/summernote/">Summernote</a> documentation for more examples and information about the plugin.
-                          </div>
-                        </div>
-                    </div>
 
                     {{-- <div class="form-group">
                      <input type="file" id="foto" name="foto" class="form-control">

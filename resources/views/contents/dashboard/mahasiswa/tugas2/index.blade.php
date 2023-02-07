@@ -21,7 +21,7 @@
                     <h5 class="card-title text-black">{{$list->nama_tugas}}</h5>
                     <br>
                     <a href="{{ route('mahasiswa.tugas.semester-2.detail', ['detailtugas2' => $list->id]) }}" class="text-primary">Detail</a><br>
-                    <a href="{{ route('pengumpulan-tugas.create')}}" class="text-primary">Kumpulkan Tugas</a>
+                    <a href="{{ route('pengumpulan-tugas2.create')}}" class="text-primary">Kumpulkan Tugas</a>
                 </div>
             </div>
             @endforeach

@@ -42,7 +42,7 @@ class TugasController extends Controller
 
         $file = $request->file('file');
         $nama_tugas = $request->nama_tugas.date('Ymdhis').'.'.$request->file('file')->getClientOriginalExtension();
-        $file->move('img/tugas/',$nama_tugas);
+        $file->move('img/tugas/semester1/',$nama_tugas);
 
         $tuga = new Tugas();
         if (!empty($request)) {
@@ -95,14 +95,14 @@ class TugasController extends Controller
 
         if (!empty($request->file('file'))) {
             //Delete Old File
-            $oldImgPath = public_path(). '/img/tugas/' . $tuga->file;
+            $oldImgPath = public_path(). '/img/tugas/semester1/' . $tuga->file;
             //D:/laravel/UAS3/public/img/mahasiswa/AS-01-01-2022.png
             unlink($oldImgPath);
 
             //Update New File
             $file =$request->file('file');
             $nama_tugas = $request->nama_tugas.date('Ymdhis').'.'.$request->file('file')->getClientOriginalExtension();
-            $file->move('img/tugas/',$nama_tugas);
+            $file->move('img/tugas/semester1/',$nama_tugas);
             $tuga->file = $nama_tugas;
 
 
@@ -115,7 +115,7 @@ class TugasController extends Controller
                 'tgl_mulai' => $request->tgl_mulai,
                 'tgl_selesai' => $request->tgl_selesai,
                 'file' => $nama_tugas,
-        ]);
+            ]);
         } else {
             $tuga->update([
                 'nama_tugas' => $request->nama_tugas,
