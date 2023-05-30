@@ -25,7 +25,7 @@
                   <!-- small box -->
                   <div class="small-box bg-warning">
                     <div class="inner">
-                      <h3>#</h3>
+                      <h3>{{$jumlah_mahasiswa}}</h3>
 
                       <p>Jumlah Mahasiswa</p>
                     </div>
@@ -40,7 +40,7 @@
                   <!-- small box -->
                   <div class="small-box bg-success">
                     <div class="inner">
-                      <h3>#</h3>
+                      <h3>{{$jumlah_dosen}}</h3>
 
                       <p>Jumlah Dosen</p>
                     </div>
@@ -55,7 +55,7 @@
                     <!-- small box -->
                     <div class="small-box bg-primary">
                       <div class="inner">
-                        <h3>#</h3>
+                        <h3>{{$jumlah_matkul}}</h3>
 
                         <p>Jumlah Mata Kuliah</p>
                       </div>
@@ -70,9 +70,9 @@
                     <!-- small box -->
                     <div class="small-box bg-danger">
                       <div class="inner">
-                        <h3>#</h3>
+                        <h3>{{$jumlah_testimoni}}</h3>
 
-                        <p>Jumlah Kelas</p>
+                        <p>Jumlah Testimoni</p>
                       </div>
                       <div class="icon">
                         <i class="fa fa-university" aria-hidden="true"></i>

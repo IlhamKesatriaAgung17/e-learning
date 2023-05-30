@@ -56,7 +56,7 @@ class DosenController extends Controller
             }
             $dosen->save();
         }
-        return redirect()->route('dosen.index')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('dosen.index')->with('success', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -121,7 +121,7 @@ class DosenController extends Controller
                 'no_tlp' => $request->no_tlp,
             ]);
         }
-        return redirect()->route('dosen.index')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('dosen.index')->with('success', 'Data Berhasil Terupdate');
     }
 
     /**
@@ -139,6 +139,6 @@ class DosenController extends Controller
        // Delete Data
        $dosen->delete();
 
-       return redirect()->route('dosen.index');
+       return redirect()->route('dosen.index')->with('success', 'Data Berhasil Dihapus');
     }
 }

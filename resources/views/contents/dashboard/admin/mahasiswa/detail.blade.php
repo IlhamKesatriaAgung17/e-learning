@@ -27,7 +27,7 @@
 
            <div class="card-body">
                 <table class="table table-bordered text-center">
-                    <table align="right" cellpadding="2" width="700" >
+                    <table align="right" cellpadding="2" width="600" >
                         <img src="{{asset('img/mahasiswa/'.$mahasiswa->foto)}}" height="30%" width="30%" alt="{{$mahasiswa->nama}}" style="float: left">
                         <tbody>
                             <tr>

@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('layouts.dashboard-dosen')
 
 @section('content')
 <div class="content-wrapper">
@@ -38,7 +38,7 @@
                         <div class="form-group">
                          <label for='matkul'>Mata Kuliah</label> <br>
                              <select id="matkul" name="matkul" class="form-control">
-                                 <option value="pilih">{{$tuga->matkul}}</option>
+                                 <option value="{{$tuga->matkul}}">{{$tuga->matkul}}</option>
                                  <option value="Pemrograman Web HTML">Pemrograman Web HTML</option>
                                  <option value="ALgoritma">Algoritma</option>
                              </select>
@@ -47,7 +47,7 @@
                         <div class="form-group">
                          <label for='semester'>Semester</label> <br>
                          <select id="semester" name="semester" class="form-control">
-                             <option value="pilih">{{$tuga->semester}}</option>
+                             <option value="{{$tuga->semester}}">{{$tuga->semester}}</option>
                              <option value="I">I</option>
                              <option value="II">II</option>
                              <option value="III">III</option>
@@ -62,13 +62,11 @@
                         <div class="form-group">
                          <label for="tgl_mulai">Selesai</label>
                           <input type="datetime-local" id="tgl_selesai" name="tgl_selesai" class="form-control" value="{{$tuga->tgl_selesai}}">
-                     </div>
-
-                        <div class="form-group">
-                         <label for='deskripsi'>Deskripsi</label> <br>
-                         <textarea  id="deskripsi" name="deskripsi" class="form-control" cols="142" rows="10">{{$tuga->deskripsi}}</textarea>
                         </div>
-
+                        <div class="form-group">
+                            <label for="">Deskripsi</label><br>
+                            <textarea name="deskripsi"  id="summernote"  cols="30" rows="10">{{$tuga->deskripsi}}</textarea>
+                        </div>
                         <div class="form-group">
                             <label for='file'>File/Dokumen</label> <br>
                             <input type="file" id="file" name="file" class="form-control">

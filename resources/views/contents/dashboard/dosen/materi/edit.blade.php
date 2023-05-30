@@ -32,11 +32,12 @@
                         @csrf
 
                         <div class="form-group">
-                            <label for="">Kategori Materi :</label><br>
-                            <input type="radio" id="PWH" name="kategori_materi" value="PWH">
-                            <label for="PWH">PWH</label><br>
-                            <input type="radio" id="Algo" name="kategori_materi" value="Algo">
-                            <label for="Algo">Algo</label><br>
+                            <label for='kategori_materi'>Kategori Materi :</label> <br>
+                                <select id="kategori_materi" name="kategori_materi" class="form-control">
+                                    <option value="{{$materi->kategori_materi}}">{{$materi->kategori_materi}}</option>
+                                    <option value="PWH">PWH</option>
+                                    <option value="Algo">Algo</option>
+                                </select>
                         </div>
 
                        <div class="form-group">

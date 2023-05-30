@@ -59,7 +59,7 @@
 
 @yield('script')
 
-{{-- @include('sweetalert::alert') --}}
+@include('sweetalert::alert')
 
 </body>
 {{-- <script>

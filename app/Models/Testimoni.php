@@ -11,6 +11,6 @@ class Testimoni extends Model
     protected $table = "testimoni";
     // protected $primarykey = "id";
     protected $fillable = [
-        'nama', 'role', 'jenis_kelamin', 'pesan',
+        'nama', 'role', 'jenis_kelamin','foto', 'pesan',
     ];
 }

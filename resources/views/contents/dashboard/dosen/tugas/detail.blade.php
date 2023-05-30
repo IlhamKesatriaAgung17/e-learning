@@ -66,7 +66,7 @@
                           <!-- accepted payments column -->
                           <div class="col-12" style="text-align: justify">
                             <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
-                              {{$tuga->deskripsi}}
+                              {!!$tuga->deskripsi!!}
                             </p>
                           </div>
                         </div>
@@ -80,7 +80,7 @@
                             </h4>
                           <div class="col-12">
                             {{-- <a href="/img/tugas/{{$tuga->file}}" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a> --}}
-                            <a href="/img/tugas/{{$tuga->file}}"><button class="btn btn-primary  float-left" type="button"> <i class="fas fa-download"></i> Download Tugas {{$tuga->nama_tugas}}</button></a>
+                            <a href="/img/tugas/semester1/{{$tuga->file}}"><button class="btn btn-primary  float-left" type="button"> <i class="fas fa-download"></i> Download Tugas {{$tuga->nama_tugas}}</button></a>
                           </div>
                         </div>
                         {{-- </div>

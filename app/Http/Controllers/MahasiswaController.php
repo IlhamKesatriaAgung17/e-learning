@@ -58,7 +58,7 @@ class MahasiswaController extends Controller
             }
             $mahasiswa->save();
         }
-        return redirect()->route('mahasiswa.index')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('mahasiswa.index')->with('success', 'Data Berhasil Terupdate');
     }
 
     /**
@@ -127,7 +127,7 @@ class MahasiswaController extends Controller
                 'no_tlp' => $request->no_tlp,
             ]);
         }
-        return redirect()->route('mahasiswa.index')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('mahasiswa.index')->with('success', 'Data Berhasil Terupdate');
     }
 
     /**
@@ -145,6 +145,6 @@ class MahasiswaController extends Controller
        // Delete Data
        $mahasiswa->delete();
 
-       return redirect()->route('mahasiswa.index');
+       return redirect()->route('mahasiswa.index')->with('success', 'Data Berhasil Dihapus');
     }
 }

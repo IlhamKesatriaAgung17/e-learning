@@ -56,7 +56,7 @@
                             <div class="row no-print">
                               <div class="col-12">
                                 {{-- <a href="/img/tugas/{{$detailmateri2->file}}" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a> --}}
-                                <a href="/img/materi/semester1/{{$detailmateri2->file}}"><button class="btn btn-primary  float-left" type="button"> <i class="fas fa-download"></i> Download Materi {{$detailmateri2->nama_materi}}</button></a>
+                                <a href="/img/materi/semester2/{{$detailmateri2->file}}"><button class="btn btn-primary  float-left" type="button"> <i class="fas fa-download"></i> Download Materi {{$detailmateri2->nama_materi}}</button></a>
                               </div>
                             </div>
                             {{-- </div>

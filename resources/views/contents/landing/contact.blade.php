@@ -60,16 +60,17 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="contact-form-wrapper">
-            <form id="contact-form" method="POST">
+            <form id="contact-form" method="POST" action="{{route('in')}}" encytype="multipart/form-data">
+              @csrf
               <div class="row">
                 <div class="col-md-12">
-                  <input type="text" class="input-field borderd" id="name" placeholder="Nama Anda" required>
+                  <input type="text" class="input-field borderd" id="name" name="name" placeholder="Nama Anda" required>
                 </div>
                 <div class="col-md-12">
-                  <input type="email" class="input-field borderd" id="email" placeholder="Masukkan Email Anda" required>
+                  <input type="email" class="input-field borderd" id="email" name="email" placeholder="Masukkan Email Anda" required>
                 </div>
                 <div class="col-12">
-                  <textarea class="input-field borderd textarea" rows="3" id="message"
+                  <textarea class="input-field borderd textarea" rows="3" id="message" name="message"
                     placeholder="Ketik Pesan" required></textarea>
                 </div>
                 <div class="col-12">

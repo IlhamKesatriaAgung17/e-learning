@@ -4,17 +4,21 @@
 <div class="login-box">
 
         <div class="card card-outline card-primary bg-light">
+            <br>
+            <center>
+                <img src="{{ asset('adminlte-3.1.0\dist\img\AMIK.png') }}" alt="Logo Ilham" width="90px" height="85">
+            </center>
             <div class="card-header text-center">
-                <a  class="h1"><b>Login User</b></a>
+                <a  class="h1"><b>LOGIN</b></a>
             </div>
 
                 <div class="card-body">
-                    <div class="card-header text-center">{{ __('Sign in to start your session') }}</div>
+                    <div class="card-header text-center">{{ __('Silahkan login disini !') }}</div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="input-group  mb-3">
-                            <input id="email" for="email" class="form-control" @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="{{ __('E-Mail Address') }}" autofocus>
+                            <input id="email" for="email" class="form-control" @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="{{ __('Alamat E-mail') }}" autofocus>
                             @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -47,13 +51,13 @@
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                       <b> {{ __('Remember Me') }} </b>
+                                       <b> {{ __('Ingatkan Saya') }} </b>
                                     </label>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <button type="submit" class="btn btn-primary btn-block">
-                                    {{ __('Sign In') }}
+                                    {{ __('Masuk') }}
                                 </button>
                             </div>
                         </div>
@@ -61,8 +65,9 @@
 
                     <div class="form-group row mb-0">
                         @if (Route::has('password.request'))
-                            <a class="btn btn-link" href="{{ route('password.request') }}">
-                                {{ __('Forgot Your Password?') }}
+
+                            <a class="btn btn-link" href="{{ route('register') }}">
+                                {{ __('Belum punya akun ?') }} &nbsp; {{ __('Daftar disini') }}
                             </a>
                         @endif
                     </div>

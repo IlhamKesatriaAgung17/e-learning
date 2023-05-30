@@ -54,7 +54,7 @@ class Materi3Controller extends Controller
             $materi->file = $nama_materi;
             $materi->save();
         }
-        return redirect()->route('materi3.index')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('materi3.index')->with('success', 'Data Berhasil Terupdate');
     }
 
     /**
@@ -123,7 +123,7 @@ class Materi3Controller extends Controller
                 'deskripsi' => $request->deskripsi,
             ]);
         }
-        return redirect()->route('materi3.index')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('materi3.index')->with('success', 'Data Berhasil Terupdate');
     }
 
     /**
@@ -141,6 +141,6 @@ class Materi3Controller extends Controller
        // Delete Data
        $materi3->delete();
 
-       return redirect()->route('materi3.index');
+       return redirect()->route('materi3.index')->with('success', 'Data Berhasil Dihapus');
     }
 }

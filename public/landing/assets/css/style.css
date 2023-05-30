@@ -1099,12 +1099,20 @@ select:focus {
 ------------------------------*/
 .hero-area {
   position: relative;
-  padding: 365px 0px 291px;
+  padding: 200px 0px 291px;
   background: url(../images/heroarea.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+.hero-areas {
+    position: relative;
+    padding: 36px 0px 291px;
+    background: url(../images/heroarea.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 .hero-area .bgimg {
   position: absolute;
   bottom: 0%;

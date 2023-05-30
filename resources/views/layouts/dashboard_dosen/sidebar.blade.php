@@ -60,6 +60,12 @@
                         <p>Materi</p>
                     </a>
                 </li>
+                <li class="nav-item {{ Route::is('dosen.data-materi','materi.index','materi.create','materi.edit','materi.show','materi2.index','materi2.create','materi2.edit','materi2.show','materi3.index','materi3.create','materi3.edit','materi3.show') ? 'active' : '' }}">
+                    <a href="{{ route('dosen.data-materi')}}" class="nav-link ">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>Materi Umum</p>
+                    </a>
+                </li>
 
                 <li class="nav-item {{ Route::is('dosen.data-tugas','tugas.index','tugas.create','tugas.edit','tugas.show','tugas2.index','tugas2.create','tugas2.edit','tugas2.show','tugas3.index','tugas3.create','tugas3.edit','tugas3.show') ? 'active' : '' }}">
                     <a href="{{ route('dosen.data-tugas')}}" class="nav-link ">

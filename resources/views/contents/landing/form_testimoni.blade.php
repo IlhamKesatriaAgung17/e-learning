@@ -1,15 +1,23 @@
-@extends('layouts.landing')
+@extends('layouts.landing.nav_testimoni')
 @section('content')
-  <!-- Contact Area Start -->
-  <section class="contact">
+<!-- Hero Area Start -->
+<div class="hero-areas">
+    <center>
+        {{-- <img class="img-fluid" src="{{asset('landing/assets/images/logo.png')}}" alt="" width="300px" height="80px"> --}}
+        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_BdVuMPcttO.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+        {{-- <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_ryphgzdj.json"  background="transparent"  speed="1"  style="width: 310px; height: 310px;"  loop  autoplay></lottie-player> --}}
+    </center>
+      <!-- Contact Area Start -->
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-10 col-lg-8">
-          <div class="section-title">
-            <h2 class="title">Tambah Testimoni</h2>
-            <p>
+          <div class="section-title text-white">
+            <h2 class="text-white">Tambah Komentar</h2>
+            <p class="text-white">
               Yukk berikan pendapatmu tentang penggunaan sistem ini.
             </p>
+            <br>
+            <button class="btn-warning"><a href="{{route('index')}}">Kembali</a></button>
           </div>
         </div>
       </div>
@@ -34,16 +42,19 @@
                 <div class="col-md-12">
                     <select id="jenis_kelamin" name="jenis_kelamin" class="form-control">
                         <option value="pilih">Pilih Jenis Kelamin</option>
-                        <option value="1.jpg">Laki-Laki</option>
-                        <option value="2.jpg">Perempuan</option>
+                        <option value="Laki-Laki">Laki-Laki</option>
+                        <option value="Perempuan">Perempuan</option>
                     </select>
                     <br>
+                </div>
+                <div class="col-md-12">
+                    <input style="background-color: white" type="file" class="input-field borderd" id="foto" name="foto" placeholder="Masukan foto" required>
                 </div>
                 <div class="col-12">
                   <textarea class="input-field borderd textarea" rows="3" id="pesan" name="pesan" placeholder="Ketik Pesan" required></textarea>
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="btn btn-sm btn-primary btn-block">Kirim</button>
+                  <button type="submit" class="btn-sm btn-success">Kirim Komentar</button>
                 </div>
               </div>
             </form>
@@ -51,7 +62,10 @@
         </div>
       </div>
     </div>
-  </section>
+
   <!-- Contact Area End -->
+</div>
+<!-- Hero Area End -->
+
 
 @endsection

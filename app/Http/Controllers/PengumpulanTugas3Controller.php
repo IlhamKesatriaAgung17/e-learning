@@ -51,7 +51,7 @@ class PengumpulanTugas3Controller extends Controller
             $tuga->file = $nama_tugas;
             $tuga->save();
         }
-        return redirect()->route('mahasiswa.tugas.semester-3')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('mahasiswa.tugas.semester-3')->with('success', 'Data Berhasil Terupdate');
     }
 
     /**
@@ -103,6 +103,6 @@ class PengumpulanTugas3Controller extends Controller
        // Delete Data
        $tuga->delete();
 
-       return redirect()->route('dosen.data-pengumpulan-tugas3');
+       return redirect()->route('dosen.data-pengumpulan-tugas3')->with('success', 'Data Berhasil Dihapus');
     }
 }

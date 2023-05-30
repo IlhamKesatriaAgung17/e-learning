@@ -24,7 +24,7 @@
         <div class="card">
            <div class="card-header">
             <h3 class="card-title">MATERI SEMESTER 3</h3>
-            <a href="{{route('dosen.data-materi')}}" class="btn btn-primary btn-sm float-right">Kembali<i class="fas fa-plus-square"></i></a>
+            <a href="{{route('dosen.data-materi')}}" class="btn btn-primary btn-sm float-right">Kembali</a>
            </div>
            <a href="{{route('materi3.create')}}" class="btn btn-success btn-sm float-right">Tambah Data <i class="fas fa-plus-square"></i></a>
            <div class="card-body table-responsive p-0">

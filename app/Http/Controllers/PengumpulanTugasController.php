@@ -52,7 +52,7 @@ class PengumpulanTugasController extends Controller
             $tuga->file = $nama_tugas;
             $tuga->save();
         }
-        return redirect()->route('mahasiswa.tugas.semester-1')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('mahasiswa.tugas.semester-1')->with('success', 'Data Berhasil Terupdate');
     }
 
     /**
@@ -123,7 +123,7 @@ class PengumpulanTugasController extends Controller
         //         'tgl_selesai' => $request->tgl_selesai,
         //     ]);
         // }
-        // return redirect()->route('tugas.index')->with('toast_success', 'Data Berhasil Terupdate');
+        // return redirect()->route('tugas.index')->with('success', 'Data Berhasil Terupdate');
     }
 
     /**
@@ -141,6 +141,6 @@ class PengumpulanTugasController extends Controller
        // Delete Data
        $tuga->delete();
 
-       return redirect()->route('dosen.data-pengumpulan-tugas1');
+       return redirect()->route('dosen.data-pengumpulan-tugas1')->with('success', 'Data Berhasil Dihapus');
     }
 }

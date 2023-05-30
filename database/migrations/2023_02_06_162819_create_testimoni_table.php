@@ -18,6 +18,7 @@ class CreateTestimoniTable extends Migration
             $table->string('nama');
             $table->string('role');
             $table->string('jenis_kelamin');
+            $table->string('foto');
             $table->string('pesan');
             $table->timestamps();
         });

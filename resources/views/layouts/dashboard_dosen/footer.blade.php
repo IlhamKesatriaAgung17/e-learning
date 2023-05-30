@@ -4,5 +4,5 @@
       Ilham  Kesatria Agung (2057401055)
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2023 <a href="https://adminlte.io">AMIK BUMI NUSANTARA CIREBON</a>.</strong> All rights reserved.
 </footer>

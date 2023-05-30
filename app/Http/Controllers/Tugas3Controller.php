@@ -56,7 +56,7 @@ class Tugas3Controller extends Controller
             $tugas3->file = $nama_tugas;
             $tugas3->save();
         }
-        return redirect()->route('tugas3.index')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('tugas3.index')->with('success', 'Data Berhasil Terupdate');
     }
 
     /**
@@ -127,7 +127,7 @@ class Tugas3Controller extends Controller
                 'tgl_selesai' => $request->tgl_selesai,
             ]);
         }
-        return redirect()->route('tugas3.index')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('tugas3.index')->with('success', 'Data Berhasil Terupdate');
     }
 
     /**
@@ -145,6 +145,6 @@ class Tugas3Controller extends Controller
        // Delete Data
        $tugas3->delete();
 
-       return redirect()->route('tugas3.index');
+       return redirect()->route('tugas3.index')->with('success', 'Data Berhasil Dihapus');
     }
 }

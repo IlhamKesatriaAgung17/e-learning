@@ -55,7 +55,7 @@ class TugasController extends Controller
             $tuga->file = $nama_tugas;
             $tuga->save();
         }
-        return redirect()->route('tugas.index')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('tugas.index')->with('success', 'Data Berhasil Terupdate');
     }
 
     /**
@@ -126,7 +126,7 @@ class TugasController extends Controller
                 'tgl_selesai' => $request->tgl_selesai,
             ]);
         }
-        return redirect()->route('tugas.index')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('tugas.index')->with('success', 'Data Berhasil Terupdate');
     }
 
     /**
@@ -138,12 +138,12 @@ class TugasController extends Controller
     public function destroy(Tugas $tuga)
     {
          // Delete File
-       $imgPath = public_path() . '/img/tugas/' . $tuga->file;
+       $imgPath = public_path() . '/img/tugas/semester1/' . $tuga->file;
        unlink($imgPath);
 
        // Delete Data
        $tuga->delete();
 
-       return redirect()->route('tugas.index');
+       return redirect()->route('tugas.index')->with('success', 'Data Berhasil Dihapus');
     }
 }

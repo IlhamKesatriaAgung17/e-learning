@@ -48,11 +48,11 @@
                        </div>
 
                        <div class="form-group">
-                        <textarea type="text" id="pesan" name="pesan" class="form-control" placeholder="pesan" value="{{$testimoni->pesan}}">
+                        <textarea type="text" id="pesan" name="pesan" class="form-control" placeholder="pesan">{{$testimoni->pesan}}</textarea>
                        </div>
 
                        <div class="form-group">
-                        <button type="submit" class="btn btn-success">Simpan Data</button> <a href="{{route('matkul.index')}}" class="btn btn-danger">Batal</a>
+                        <button type="submit" class="btn btn-success">Simpan Data</button> <a href="{{route('testimoni.index')}}" class="btn btn-danger">Batal</a>
                        </div>
                    </form>
                 </table>

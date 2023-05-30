@@ -68,7 +68,10 @@
         </div>
         <div class="col-lg-4 d-flex justify-content-center">
           <div class="center-feature align-self-center">
-            <img src="landing/assets/images/logo.png" alt="">
+            {{-- <img src="landing/assets/images/logo.png" alt=""> --}}
+            {{-- <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_shtu48j0.json"  background="transparent"  speed="1"  style="width: 350px; height: 350px;"  loop  autoplay></lottie-player> --}}
+            {{-- <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_hbeCPj.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player> --}}
+            <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_vAtD7F.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
           </div>
         </div>
         <div class="col-lg-4">
@@ -126,6 +129,7 @@
       </div>
     </div>
   </section>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <!-- Service Area End -->
 
   <!-- Deal Of the Week Start -->

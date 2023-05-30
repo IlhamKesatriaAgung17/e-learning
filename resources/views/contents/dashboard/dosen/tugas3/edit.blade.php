@@ -38,7 +38,7 @@
                         <div class="form-group">
                          <label for='matkul'>Mata Kuliah</label> <br>
                              <select id="matkul" name="matkul" class="form-control">
-                                <option value="pilih">{{$tugas3->matkul}}</option>
+                                <option value="{{$tugas3->matkul}}">{{$tugas3->matkul}}</option>
                                 <option value="Pemrograman Web Framewok Laravel">Pemrograman Web Framewok Laravel</option>
                                 <option value="Basis Data">Basis Data</option>
                                 <option value="Arsitektur Komputer">Arsitektur Komputer</option>
@@ -48,7 +48,7 @@
                         <div class="form-group">
                          <label for='semester'>Semester</label> <br>
                          <select id="semester" name="semester" class="form-control">
-                             <option value="pilih">{{$tugas3->semester}}</option>
+                             <option value="{{$tugas3->semester}}">{{$tugas3->semester}}</option>
                              <option value="I">I</option>
                              <option value="II">II</option>
                              <option value="III">III</option>

@@ -7,9 +7,9 @@
     .hero-area .left-content .content .title {
         font-size: 48px;
         line-height: 58px;
-    } 
+    }
     .hero-area {
-        padding: 345px 0px 272px;
+        padding: 35px 0px 272px;
     }
     .about .right-shape {
         right: -240px;
@@ -19,7 +19,7 @@
     }
     .faq .right-shape {
         right: -240px;
-    
+
     }
     .feature .feature-box .feature-circle{
         display: none;
@@ -78,7 +78,7 @@
         padding: 5px 14px;
         font-size: 20px;
         line-height: 24px;
-        
+
      }
      .dealofweek .deal-slider-area .content .right-area .price p span,
      .pricing .product-slider .item .single-product .content .price .new-price
@@ -126,12 +126,12 @@
     .hero-area .right-img .img {
         position: relative;
         animation: none;
-    
+
     }
     .navigation .navbar {
         padding: 5px 15px;
     }
-    
+
     .navigation .navbar #mainmenu ul li a {
         padding: 10px 10px 10px!important;
         display: inline-block;
@@ -175,14 +175,14 @@
     .navigation .navbar #mainmenu ul .nav-item .nav-link {
         color: #242424;
       }
-      
+
       .navigation .navbar #mainmenu ul .nav-item .nav-link::before {
         background-image: -webkit-linear-gradient(35deg, #0250c5 0%, #d43f8d 100%);
         background-image: -o-linear-gradient(35deg, #0250c5 0%, #d43f8d 100%);
         background-image: linear-gradient(55deg, #0250c5 0%, #d43f8d 100%);
       }
-      
-      .navigation .navbar #mainmenu ul .nav-item .nav-link:hover::before, 
+
+      .navigation .navbar #mainmenu ul .nav-item .nav-link:hover::before,
       .navigation .navbar #mainmenu ul .nav-item .nav-link.active::before {
         background-image: -webkit-linear-gradient(35deg, #0250c5 0%, #d43f8d 100%);
         background-image: -o-linear-gradient(35deg, #0250c5 0%, #d43f8d 100%);
@@ -190,16 +190,16 @@
       }
 
       .home5 .navigation .navbar #mainmenu ul .nav-item .nav-link::before {
-        background: #D31027; 
-        background: -webkit-linear-gradient(to right, #EA384D, #D31027); 
-        background: linear-gradient(to right, #EA384D, #D31027); 
+        background: #D31027;
+        background: -webkit-linear-gradient(to right, #EA384D, #D31027);
+        background: linear-gradient(to right, #EA384D, #D31027);
       }
-      
-      .home5 .navigation .navbar #mainmenu ul .nav-item .nav-link:hover::before, 
+
+      .home5 .navigation .navbar #mainmenu ul .nav-item .nav-link:hover::before,
       .home5 .navigation .navbar #mainmenu ul .nav-item .nav-link.active::before {
-        background: #D31027; 
-        background: -webkit-linear-gradient(to right, #EA384D, #D31027); 
-        background: linear-gradient(to right, #EA384D, #D31027); 
+        background: #D31027;
+        background: -webkit-linear-gradient(to right, #EA384D, #D31027);
+        background: linear-gradient(to right, #EA384D, #D31027);
       }
 
       #mainmenu ul.navbar-nav{
@@ -217,7 +217,7 @@
           margin-bottom: 42px;
       }
       .center-feature img{
-        max-width: 350px; 
+        max-width: 350px;
         margin: 14px 0px 14px;
       }
       .feature .left-feature .feature-box .icon{
@@ -350,14 +350,14 @@
         max-width: 250px;
         width: 100%;
     }
-    
+
     .footer-widget.use-full-link-widget{
         margin-top: 18px;
     }
     /* Index 2 start */
-    .index2 .center-feature img, 
-    .index2 .whaybest .about-img img, 
-    .index2 .hero-area .right-img .img, 
+    .index2 .center-feature img,
+    .index2 .whaybest .about-img img,
+    .index2 .hero-area .right-img .img,
     .index2 .dealofweek .deal-slider-area .content .left-area img {
         max-width: 100%;
         width: auto;
@@ -392,7 +392,7 @@
     .feature .feature-box .details .title,
     .video .fun-box .inner-content .categori,
     .pricing .product-slider .item .single-product .content .title,
-    
+
     .comment-area .title,
     .write-comment .title,
     .categori-widget .title,
@@ -411,7 +411,7 @@
     {
         font-size: 24px;
         line-height: 34px;
-    }  
+    }
     .home9 .hero-area .right-img {
         padding: 0px 101px;
     }
@@ -475,7 +475,7 @@
     .hero-area .right-img {
         padding: 0px 30px;
     }
-    .section-title .title, 
+    .section-title .title,
     .about .info .info-title,
     .whaybest .info .info-title, .section-title .title
     {
@@ -497,7 +497,7 @@
     .comment-area .comment-box-area li .comment-box.replay-comment {
         margin-left: 30px;
       }
-      
+
       .comment-area .comment-box-area li .comment-box .left{
         position: relative;
         display: inline-block;

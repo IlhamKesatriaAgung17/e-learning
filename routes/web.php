@@ -19,6 +19,9 @@ use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\CobaController;
 use App\Http\Controllers\TestimoniController;
+use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\PDFController;
+use App\Http\Controllers\PesanController;
 // use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -57,14 +60,17 @@ Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('testimoni-form', TestimoniController::class);
+Route::get('index/form', [LandingController::class, 'form_pesan'])->name('index.form');
+Route::post('index/kirim', [LandingController::class, 'kirim_pesan'])->name('index.kirim');
 
 Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
     Route::get('dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
-    Route::get('profile', [AdminController::class, 'profile'])->name('admin.profile');
-    Route::get('settings', [AdminController::class, 'settings'])->name('admin.settings');
     Route::resource('mahasiswa', MahasiswaController::class);
     Route::resource('dosen', DosenController::class);
     Route::resource('matkul', MatkulController::class);
+    Route::resource('testimoni', TestimoniController::class);
+    Route::resource('pengguna', PenggunaController::class);
+    Route::get('admin/testimoni/cetak-laporan', [PDFController::class, 'index'])->name('admin.testimoni.cetak-laporan');
 });
 
 Route::group(['prefix'=>'mahasiswa', 'middleware'=>['isUser','auth']], function(){

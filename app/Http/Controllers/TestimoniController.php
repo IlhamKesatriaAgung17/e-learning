@@ -36,15 +36,24 @@ class TestimoniController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'foto' =>'mimes:jpg,jpeg,png'
+        ]);
+
+        $foto = $request->file('foto');
+        $nama_foto = $request->nama.date('Ymdhis').'.'.$request->file('foto')->getClientOriginalExtension();
+        $foto->move('landing/assets/images/testimonialimage/',$nama_foto);
+
         $tuga = new Testimoni();
         if (!empty($request)) {
             $tuga->nama = $request->nama;
             $tuga->role = $request->role;
             $tuga->jenis_kelamin = $request->jenis_kelamin;
+            $tuga->foto = $nama_foto;
             $tuga->pesan = $request->pesan;
             $tuga->save();
         }
-        return redirect()->route('index')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('index')->with('success', 'Data Berhasil Dibuat');
     }
 
     /**
@@ -64,9 +73,9 @@ class TestimoniController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Testimoni $testimoni)
     {
-        //
+        return view('contents.dashboard.admin.testimoni.edit',compact('testimoni'));
     }
 
     /**
@@ -76,9 +85,13 @@ class TestimoniController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $testimoni)
     {
-        //
+
+        $model = Testimoni::findOrFail($testimoni);
+        $model->update($request->all());
+        return redirect()->route('testimoni.index')->with('success', 'Data Berhasil Diupdate.');
+
     }
 
     /**
@@ -87,8 +100,14 @@ class TestimoniController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Testimoni $testimoni)
     {
-        //
+          // Delete File
+       $imgPath = public_path() . '/landing/assets/images/testimonialimage/' . $testimoni->foto;
+       unlink($imgPath);
+        // Delete Data
+       $testimoni->delete();
+
+       return redirect()->route('testimoni.index')->with('success', 'Data Berhasil Dihapus');
     }
 }

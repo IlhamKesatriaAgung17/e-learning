@@ -25,6 +25,7 @@
         <div class="card">
            <div class="card-header">
             <h3 class="card-title">Testimoni</h3>
+            <a href="{{route('admin.testimoni.cetak-laporan')}}" target="_blank" class="btn btn-success btn-sm float-right">Cetak Laporan <i class="fas fa-plus-square"></i></a>
             </div>
            <div class="card-body table-responsive p-0">
             @if ($dttestimoni->isEmpty())
@@ -36,6 +37,7 @@
                         <th width="300px">Nama</th>
                         <th>Role</th>
                         <th width="200px">Avatar</th>
+                        <th width="200px">Pesan</th>
                         <th>Aksi</th>
                     </tr>
                     @foreach ($dttestimoni as $no => $items )
@@ -45,10 +47,10 @@
                         <td>{{$items->role}}</td>
                         <td align="center">
                             <div class="form-group">
-                                <img src="{{asset('img/matkul/'.$items->jenis_kelamin)}}" height="40%" width="40%" alt="foto">
+                                <img src="{{asset('landing/assets/images/testimonialimage/'.$items->foto)}}" height="40%" width="40%" alt="foto">
                             </div>
                         </td>
-
+                        <td>{{$items->pesan}}</td>
                         <td class="text-center">
                             <div class="btn-group">
                             <a href="{{route('testimoni.edit',['testimoni' => $items->id]) }}"><i class="fas fa-edit btn btn-warning btn-sm"></i></a>

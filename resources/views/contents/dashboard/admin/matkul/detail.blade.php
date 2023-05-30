@@ -27,7 +27,7 @@
 
            <div class="card-body">
                 <table class="table table-bordered text-center">
-                    <table align="right" cellpadding="2" align="right" width="700" >
+                    <table align="right" cellpadding="2" align="right" width="600" >
                         <img src="{{asset('img/matkul/'.$matkul->foto)}}" height="30%" width="30%" alt="{{$matkul->nama}}" style="float: left">
                         <tbody>
                             <tr>

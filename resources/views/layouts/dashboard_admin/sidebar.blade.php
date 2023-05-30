@@ -75,6 +75,30 @@
                       </p>
                     </a>
                 </li>
+                <li class="nav-item {{ Route::is('matkul.index','matkul.create','matkul.edit','matkul.show') ? 'active' : '' }} ">
+                    <a href="{{ route('matkul.index')}}" class="nav-link">
+                        <i class="nav-icon fa fa-book" aria-hidden="true"></i>
+                      <p class="text nav-text">
+                        Materi Umum
+                      </p>
+                    </a>
+                </li>
+                <li class="nav-item {{ Route::is('testimoni.index','testimoni.create','testimoni.edit','testimoni.show') ? 'active' : '' }} ">
+                    <a href="{{ route('testimoni.index')}}" class="nav-link">
+                        <i class="nav-icon fa fa-book" aria-hidden="true"></i>
+                      <p class="text nav-text">
+                        Testimoni
+                      </p>
+                    </a>
+                </li>
+                <li class="nav-item {{ Route::is('pengguna.index','pengguna.create','pengguna.edit','pengguna.show') ? 'active' : '' }} ">
+                    <a href="{{ route('pengguna.index')}}" class="nav-link">
+                        <i class="nav-icon fa fa-book" aria-hidden="true"></i>
+                      <p class="text nav-text">
+                        Pengguna
+                      </p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

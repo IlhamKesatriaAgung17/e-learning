@@ -32,7 +32,7 @@
             <div class="item">
                 <div class="client">
                   <div class="client-image">
-                    <img src="{{asset('landing/assets/images/testimonialimage/'.$data->jenis_kelamin)}}" class="img-fluid" alt="">
+                    <img src="{{asset('landing/assets/images/testimonialimage/'.$data->foto)}}" class="img-fluid2" alt="">
                   </div>
                   <p class="client-say">
                     {{$data->pesan}}

@@ -11,7 +11,8 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
-                        <li class="breadcrumb-item">Data Tugas</li>
+                        <li class="breadcrumb-item"><a href="{{route('dosen.data-tugas')}}">Data Tugas</a></li>
+                        <li class="breadcrumb-item">Data Tugas Semester 1</li>
                     </ol>
                 </div>
             </div>

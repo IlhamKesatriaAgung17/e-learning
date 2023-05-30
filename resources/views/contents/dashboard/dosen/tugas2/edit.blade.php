@@ -38,7 +38,7 @@
                         <div class="form-group">
                          <label for='matkul'>Mata Kuliah</label> <br>
                              <select id="matkul" name="matkul" class="form-control">
-                                <option value="pilih">{{$tugas2->matkul}}</option>
+                                <option value="{{$tugas2->matkul}}">{{$tugas2->matkul}}</option>
                                 <option value="Pemrograman Web PHP">Pemrograman Web PHP</option>
                                 <option value="Sistem Informasi Manajemen">Sistem Informasi Manajemen</option>
                              </select>
@@ -47,7 +47,7 @@
                         <div class="form-group">
                          <label for='semester'>Semester</label> <br>
                          <select id="semester" name="semester" class="form-control">
-                             <option value="pilih">{{$tugas2->semester}}</option>
+                             <option value="{{$tugas2->semester}}">{{$tugas2->semester}}</option>
                              <option value="I">I</option>
                              <option value="II">II</option>
                              <option value="III">III</option>

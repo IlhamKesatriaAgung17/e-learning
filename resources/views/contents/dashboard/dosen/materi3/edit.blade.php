@@ -31,14 +31,13 @@
                      @method('patch')
                      @csrf
 
-                     <div class="form-group">
-                        <label for="">Kategori Materi :</label><br>
-                        <input type="radio" id="pwfl" name="kategori_materi" value="PWFL">
-                        <label for="PWFL">PWFL</label><br>
-                        <input type="radio" id="basisdata" name="kategori_materi" value="BD">
-                        <label for="BD">BD</label><br>
-                        <input type="radio" id="AK" name="kategori_materi" value="AK">
-                        <label for="AK">AK</label><br>
+                    <div class="form-group">
+                        <label for='kategori_materi'>Kategori Materi :</label> <br>
+                        <select id="kategori_materi" name="kategori_materi" class="form-control">
+                            <option value="{{$materi3->kategori_materi}}">{{$materi3->kategori_materi}}</option>
+                            <option value="PWFL">PWFL</option>
+                            <option value="BD">BD</option>
+                        </select>
                     </div>
 
 

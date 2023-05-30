@@ -54,7 +54,7 @@ class MatkulController extends Controller
             }
             $matkul->save();
         }
-        return redirect()->route('matkul.index')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('matkul.index')->with('success', 'Data Berhasil Dibuat');
     }
 
     /**
@@ -117,7 +117,7 @@ class MatkulController extends Controller
                 'sks' => $request->sks,
             ]);
         }
-        return redirect()->route('matkul.index')->with('toast_success', 'Data Berhasil Terupdate');
+        return redirect()->route('matkul.index')->with('success', 'Data Berhasil Terupdate');
     }
 
     /**
@@ -135,6 +135,6 @@ class MatkulController extends Controller
        // Delete Data
        $matkul->delete();
 
-       return redirect()->route('matkul.index');
+       return redirect()->route('matkul.index')->with('success', 'Data Berhasil Dihapus');
     }
 }
